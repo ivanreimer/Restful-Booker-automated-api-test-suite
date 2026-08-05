@@ -1,0 +1,14 @@
+{
+  "name": "JSONPlaceHolder App",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Iván Reimer",
+  "license":"MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.1.2"
+  },
+  "scripts": {}
+}
