@@ -179,7 +179,6 @@ Restful-Booker-automated-api-test-suite/
 │   └── fixtures/
 │       ├── booking-data.ts        # Datos de prueba reutilizables
 │       └── auth.fixture.ts        # Setup de autenticación
-├── .env.example                   # Template de variables
 ├── .gitignore
 ├── playwright.config.ts           # Configuración de Playwright
 ├── tsconfig.json                  # Configuración TypeScript
