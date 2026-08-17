@@ -1,18 +1,33 @@
 import { test, expect } from '@playwright/test';
+import { title } from 'node:process';
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
+test('GET THE POSTS STATUS CODE', async ({ request }) => {
+  const response = await request.get('/posts/101');
+  const jsonBody ={
+      body: "I'm a good and humble person, who wants to learn API automation.",
+      id: 101,
+      title: 'Iván Reimer Post',
+      userId: 1
+    }  
+  expect(await response.json()).toEqual(jsonBody);
 });
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+test('get started link', async ({ request }) => {
+  const response = await request.post('/auth',
+      {
+        headers:
+        {
+          'Content-Type': 'application/json'
+        },   
+        data:
+        {
+          username: 'admin',
+          password: 'password123' 
+        }
+      }
 
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+    );
+    const body = await response.json();
+    const token = body.token;
+    expect(token).toEqual('abc123');
 });
