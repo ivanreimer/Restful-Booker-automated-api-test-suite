@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-import { title } from 'node:process';
 
 test('GET THE POSTS STATUS CODE', async ({ request }) => {
   const response = await request.get('/posts/101');
