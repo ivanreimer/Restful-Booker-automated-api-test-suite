@@ -184,8 +184,8 @@ Restful-Booker-automated-api-test-suite/
 ├── playwright.config.ts           # Configuración de Playwright
 ├── tsconfig.json                  # Configuración TypeScript
 ├── package.json
-├── readmeES.md                    # Este archivo
-├── readmeEN.md                    # Versión en inglés
+├── README-ESPAÑOL.md              # Este archivo
+├── README.md                      # Versión en inglés
 └── README.md                      # Link a los dos READMEs
 ```
 
@@ -529,7 +529,7 @@ Este proyecto está bajo la licencia **MIT**. Ver [LICENSE](./LICENSE) para más
 QA Automation Engineer SSR | Quilmes, Buenos Aires 🇦🇷
 
 📧 [ivanreimer1@gmail.com](mailto:ivanreimer1@gmail.com)  
-🔗 [GitHub](https://github.com/ivanreimer) | [LinkedIn](https://linkedin.com/in/ivanreimer)
+🔗 [GitHub](https://github.com/ivanreimer) | [LinkedIn](https://linkedin.com/in/ivan-reimer)
 
 ---
 
