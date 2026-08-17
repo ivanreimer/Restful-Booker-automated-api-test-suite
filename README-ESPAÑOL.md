@@ -185,8 +185,7 @@ Restful-Booker-automated-api-test-suite/
 ├── tsconfig.json                  # Configuración TypeScript
 ├── package.json
 ├── README-ESPAÑOL.md              # Este archivo
-├── README.md                      # Versión en inglés
-└── README.md                      # Link a los dos READMEs
+└── README.md                      # Versión en inglés
 ```
 
 ---
