@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { ApiClient } from '../../src/api/client';
 import { BookingsApi } from '../../src/api/bookings.api';
-import { Booking } from '../../src/types/booking.types';
+import { booking} from '../fixtures/booking-data';
 
 test('Get all bookings', async ({ request }) => {
 
@@ -36,18 +36,6 @@ test('Create booking', async ({ request }) => {
   const client = new ApiClient(request);
 
   const bookingsApi = new BookingsApi(client);
-
-  const booking: Booking = {
-    firstname: 'Jim',
-    lastname: 'Brown',
-    totalprice: 111,
-    depositpaid: true,
-    bookingdates: {
-      checkin: '2026-08-17',
-      checkout: '2026-08-20',
-    },
-    additionalneeds: 'Breakfast',
-  };
 
   const response = await bookingsApi.createBooking(booking);
 
