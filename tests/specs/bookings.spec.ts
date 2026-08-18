@@ -1,13 +1,7 @@
-import { test, expect } from '@playwright/test';
-import { ApiClient } from '../../src/api/client';
-import { BookingsApi } from '../../src/api/bookings.api';
-import { booking} from '../fixtures/booking-data';
+import {test, expect} from '../fixtures/api.fixtures';
+import { booking } from '../fixtures/booking-data';
 
-test('Get all bookings', async ({ request }) => {
-
-  const client = new ApiClient(request);
-
-  const bookingsApi = new BookingsApi(client);
+test('Get all bookings', async ({ bookingsApi }) => {
 
   const response = await bookingsApi.getAllBookings();
 
@@ -17,10 +11,7 @@ test('Get all bookings', async ({ request }) => {
 
   console.log(body);
 });
-test('Get one booking',async ({request})=> {
-    const client = new ApiClient(request);
-
-    const bookingsApi = new BookingsApi(client);
+test('Get one booking',async ({bookingsApi})=> {
 
     const response = await bookingsApi.getBookingById(1);
 
@@ -31,11 +22,7 @@ test('Get one booking',async ({request})=> {
     console.log(body);
 
 });
-test('Create booking', async ({ request }) => {
-
-  const client = new ApiClient(request);
-
-  const bookingsApi = new BookingsApi(client);
+test('Create booking', async ({ bookingsApi }) => {
 
   const response = await bookingsApi.createBooking(booking);
 
