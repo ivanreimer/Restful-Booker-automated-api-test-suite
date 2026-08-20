@@ -11,3 +11,8 @@ export type Booking = {
   bookingdates: BookingDates;
   additionalneeds: string;
 };
+
+export type BookingWithId ={
+  bookingid : number;
+  booking : Booking; 
+}
