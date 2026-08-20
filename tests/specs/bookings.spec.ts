@@ -1,7 +1,7 @@
-import {test, expect} from '../fixtures/api.fixtures';
+import {bookingTest, expect} from '../fixtures/api.fixture';
 import { booking } from '../fixtures/booking-data';
 
-test('Get all bookings', async ({ bookingsApi }) => {
+bookingTest('Get all bookings', async ({ bookingsApi }) => {
 
   const response = await bookingsApi.getAllBookings();
 
@@ -11,9 +11,9 @@ test('Get all bookings', async ({ bookingsApi }) => {
 
   console.log(body);
 });
-test('Get one booking',async ({bookingsApi})=> {
+bookingTest('Get one booking',async ({bookingsApi})=> {
 
-    const response = await bookingsApi.getBookingById(1);
+    const response = await bookingsApi.getBookingById(20);
 
     expect(response.status()).toBe(200);
 
@@ -22,7 +22,7 @@ test('Get one booking',async ({bookingsApi})=> {
     console.log(body);
 
 });
-test('Create booking', async ({ bookingsApi }) => {
+bookingTest('Create booking', async ({ bookingsApi }) => {
 
   const response = await bookingsApi.createBooking(booking);
 
