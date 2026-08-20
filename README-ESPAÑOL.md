@@ -50,6 +50,7 @@ Este proyecto demuestra:
 
 - **Node.js** >= 18.x
 - **npm** >= 9.x (o yarn/pnpm)
+- **TypeScript** instalado como dependencia de desarrollo
 - Conocimiento básico de:
   - APIs REST (GET, POST, PUT, DELETE)
   - TypeScript
@@ -178,7 +179,7 @@ Restful-Booker-automated-api-test-suite/
 │   │   └── bookings-crud.spec.ts  # Tests de CREATE, UPDATE, DELETE
 │   └── fixtures/
 │       ├── booking-data.ts        # Datos de prueba reutilizables
-│       └── auth.fixture.ts        # Setup de autenticación
+│       └── api.fixture.ts         # Setup de fixtures API
 ├── .gitignore
 ├── playwright.config.ts           # Configuración de Playwright
 ├── tsconfig.json                  # Configuración TypeScript
