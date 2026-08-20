@@ -4,11 +4,17 @@
   "description": "",
   "main": "index.js",
   "author": "Iván Reimer",
-  "license":"MIT",
+  "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.62.1",
-    "@types/node": "^26.1.2"
+    "@types/node": "^26.1.2",
+    "typescript": "^7.0.2"
   },
-  "scripts": {}
+  "scripts": {
+  "test": "playwright test",
+  "test:list": "playwright test --list",
+  "test:report": "playwright show-report",
+  "typecheck": "tsc --noEmit"
+}
 }
