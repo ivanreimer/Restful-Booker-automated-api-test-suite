@@ -166,24 +166,25 @@ Restful-Booker-automated-api-test-suite/
 │   ├── api/
 │   │   ├── client.ts              # Base HTTP client (request abstraction)
 │   │   ├── auth.api.ts            # Authentication endpoints
-│   │   └── bookings.api.ts        # CRUD operations for bookings
-│   ├── types/
-│   │   └── booking.types.ts       # TypeScript interfaces and types
-│   └── utils/
-│       ├── validators.ts          # Validation functions
-│       └── helpers.ts             # Utility functions
+│   │   └── bookings.api.ts        # Booking endpoints
+│   └── types/
+│       └── booking.types.ts       # TypeScript booking types
 ├── tests/
-│   ├── specs/
-│   │   ├── auth.spec.ts           # Authentication tests
-│   │   ├── bookings.spec.ts       # Read (GET) tests
-│   │   └── bookings-crud.spec.ts  # CREATE, UPDATE, DELETE tests
-│   └── fixtures/
-│       ├── booking-data.ts        # Reusable test data
-│       └── api.fixture.ts         # API fixtures setup
+│   ├── fixtures/
+│   │   ├── api.fixture.ts         # Chained API fixtures
+│   │   └── booking-data.ts        # Reusable booking test data
+│   ├── helpers/
+│   │   ├── booking.helper.ts      # Booking test helpers
+│   │   └── env.helper.ts          # Required environment variable helper
+│   └── specs/
+│       ├── auth.spec.ts           # Authentication tests
+│       └── bookings.spec.ts       # Booking tests
+├── .env.example                   # Environment variables template
 ├── .gitignore
+├── package-lock.json
+├── package.json
 ├── playwright.config.ts           # Playwright configuration
 ├── tsconfig.json                  # TypeScript configuration
-├── package.json
 ├── README-ESPAÑOL.md              # Spanish version
 └── README.md                      # This file
 ```

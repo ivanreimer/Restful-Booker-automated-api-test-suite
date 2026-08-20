@@ -165,25 +165,26 @@ Restful-Booker-automated-api-test-suite/
 ├── src/
 │   ├── api/
 │   │   ├── client.ts              # Cliente HTTP base (abstracción de requests)
-│   │   ├── auth.api.ts            # Métodos de autenticación
-│   │   └── bookings.api.ts        # Métodos de CRUD de reservas
-│   ├── types/
-│   │   └── booking.types.ts       # Interfaces y tipos TypeScript
-│   └── utils/
-│       ├── validators.ts          # Funciones de validación
-│       └── helpers.ts             # Funciones auxiliares
+│   │   ├── auth.api.ts            # Endpoints de autenticación
+│   │   └── bookings.api.ts        # Endpoints de reservas
+│   └── types/
+│       └── booking.types.ts       # Tipos TypeScript de reservas
 ├── tests/
-│   ├── specs/
-│   │   ├── auth.spec.ts           # Tests de login y tokens
-│   │   ├── bookings.spec.ts       # Tests de lectura (GET)
-│   │   └── bookings-crud.spec.ts  # Tests de CREATE, UPDATE, DELETE
-│   └── fixtures/
-│       ├── booking-data.ts        # Datos de prueba reutilizables
-│       └── api.fixture.ts         # Setup de fixtures API
+│   ├── fixtures/
+│   │   ├── api.fixture.ts         # Fixtures API encadenadas
+│   │   └── booking-data.ts        # Datos de prueba reutilizables
+│   ├── helpers/
+│   │   ├── booking.helper.ts      # Helpers para tests de reservas
+│   │   └── env.helper.ts          # Helper para variables de entorno obligatorias
+│   └── specs/
+│       ├── auth.spec.ts           # Tests de autenticación
+│       └── bookings.spec.ts       # Tests de reservas
+├── .env.example                   # Plantilla de variables de entorno
 ├── .gitignore
+├── package-lock.json
+├── package.json
 ├── playwright.config.ts           # Configuración de Playwright
 ├── tsconfig.json                  # Configuración TypeScript
-├── package.json
 ├── README-ESPAÑOL.md              # Este archivo
 └── README.md                      # Versión en inglés
 ```
